@@ -1,0 +1,192 @@
+@media (max-width: 900px) {
+    body {
+        height: auto;
+        width: 100%; /* Cambiado a width */
+    }
+    header {
+        padding: 15px 0;
+        min-height: 150px; 
+    }
+
+    nav {
+        height: auto; /* Cambiado a auto para que se ajuste */
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 0 20px; 
+        position: relative; 
+    } 
+
+    nav ul {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        top: 60px; /* Ajustado para que no se superponga */
+        right: 0; 
+        background: #00796b;
+        width: 100%; 
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex; 
+    }
+
+    .productos-container {
+        display: grid; /* Cambiado a grid */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px; /* Espacio entre productos */
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el icono del menú en pantallas pequeñas */
+        cursor: pointer; 
+    }
+}
+
+@media (max-width: 626px) {
+    body {
+        height: auto;
+        width: 100%; /* Asegúrate de que el ancho sea 100% */
+    }
+
+    header {
+        padding: 10px 0; /* Reduce el padding */
+        min-height: 120px; /* Ajusta la altura mínima */
+    }
+
+    .home {
+        min-height: 120px; /* Ajusta la altura mínima */
+    }
+    
+    nav .navbar-brand { 
+        margin-left: 10px; 
+        font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    } 
+
+    nav ul {
+        flex-direction: column; /* Vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    nav ul li { 
+        margin: 8px 0; /* Ajusta el margen */
+    }
+
+    nav a { 
+        color: white; 
+        text-decoration: none; 
+        font-weight: bold; 
+        transition: color 0.3s; 
+        padding: 8px; /* Ajusta el padding */
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .producto {
+        margin: 10px auto;
+        width: 90%; /* Ajusta el ancho */
+    }
+
+    .productos-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .form-container {
+        grid-template-columns: 1fr 2fr; /* Dos columnas en pantallas más grandes */
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        max-width: 100%;
+        height: auto;
+    }
+
+    header {
+        padding: 5px 0; /* Reduce el padding para pantallas muy pequeñas */
+        min-height: 100px; /* Ajusta la altura mínima */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+
+    .home {
+        min-height: 100px; /* Ajusta la altura mínima */
+    }
+
+    nav { 
+        padding: 0 10px; 
+    } 
+   
+    nav .navbar-brand { 
+        margin-left: 5px; 
+        font-size: 1em; /* Ajusta el tamaño de la fuente */
+    } 
+
+    .hero h1 {
+        font-size: 18px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .hero h2 {
+        font-size: 24px; /* Ajusta el tamaño del encabezado */
+    }
+
+    .btn, .button {
+        padding: 8px 12px; /* Ajusta el padding */
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .producto {
+        width: 100%; /* Asegúrate de que el producto ocupe todo el ancho */
+ margin: 10px 0; 
+    }
+
+    .contact-info {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #cont, section {
+        flex: 1; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        height: auto;
+        max-width: 100%;
+        padding: 0 2px; /* Ajusta el padding */
+    }
+
+    header {
+        padding: 5px 0; 
+        min-height: 80px; /* Ajusta la altura mínima */
+    }
+
+    .home {
+        min-height: 80px; /* Ajusta la altura mínima */
+    }
+
+    header h1, header h2 {
+        font-size: 1em; /* Ajusta el tamaño de los encabezados */
+    }
+
+    .home {
+        background-size: contain; /* Asegura que la imagen de fondo se ajuste bien */
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    #cont, section {
+        flex: 1; 
+        margin-bottom: 10px; 
+    }
+}
